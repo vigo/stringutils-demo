@@ -6,18 +6,21 @@
 
 # stringutils
 
-Demo purpose basic golang package. Contains only one function:
+A basic golang package for demonstration purpose. Package currently contains 
+only one function:
 
-`stringutils.Reverse(string)`.
+```go
+func Reverse(s string) string
+```
 
 ---
 
 ## Installation
 
-Go to your project root, where `go.mod` files exists, than;
+Go to your project root, where `go.mod` file exists, than grab the library via:
 
 ```bash
-$ go install github.com/vigo/stringutils-demo@latest
+go install github.com/vigo/stringutils-demo@latest
 ```
 
 ---
@@ -35,7 +38,7 @@ import (
 
 func main(){
 	reversed := stringutils.Reverse("vigo")
-	fmt.Println(reversed)
+	fmt.Println(reversed) // ogiv
 }
 ```
 
@@ -44,16 +47,25 @@ func main(){
 ## Makefile
 
 ```bash
-$ make help
-
-  make <command>
-
-  commands:
-
-  test    run tests
-  bench   run benchmark tests
-  doc     run godoc server at 3000 unless PORT env-var is set
+make help
 ```
+
+Commands usage:
+
+```bash
+make <command>
+
+commands:
+
+test    run tests
+bench   run benchmark tests
+doc     run godoc server at 3000 unless PORT env-var is set
+```
+
+- `make test`: Runs tests
+- `make bench`: Runs benchmark tests
+- `make doc`: Runs godoc server on port 3000. Use `PORT` environment variable
+  for different port -> `PORT=4000 make doc`
 
 ---
 
