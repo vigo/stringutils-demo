@@ -20,7 +20,7 @@ func Reverse(s string) string
 Go to your project root, where `go.mod` file exists, than grab the library via:
 
 ```bash
-go install github.com/vigo/stringutils-demo@latest
+go get github.com/vigo/stringutils-demo@latest
 ```
 
 ---
