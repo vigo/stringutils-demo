@@ -1,6 +1,6 @@
 ![Version](https://img.shields.io/badge/version-0.1.1-orange.svg)
 ![Test](https://github.com/vigo/stringutils-demo/actions/workflows/go.yml/badge.svg)
-![Go](https://img.shields.io/badge/go-1.17-black.svg)
+![Go](https://img.shields.io/github/go-mod/go-version/vigo/stringutils-demo)
 [![Documentation](https://godoc.org/github.com/vigo/stringutils-demo?status.svg)](https://pkg.go.dev/github.com/vigo/stringutils-demo)
 [![Go Report Card](https://goreportcard.com/badge/github.com/vigo/stringutils-demo)](https://goreportcard.com/report/github.com/vigo/stringutils-demo)
 
