@@ -10,7 +10,7 @@ A basic golang package for demonstration purpose. Package currently contains
 only one function:
 
 ```go
-func Reverse(s string) string
+func Reverse(s string) (string, error)
 ```
 
 ---
@@ -37,7 +37,10 @@ import (
 )
 
 func main(){
-	reversed := stringutils.Reverse("vigo")
+	reversed, err := stringutils.Reverse("vigo")
+	if err != nil {
+		log.Fatal(err)
+	}    
 	fmt.Println(reversed) // ogiv
 }
 ```
@@ -57,12 +60,14 @@ make <command>
 
 commands:
 
-test    run tests
-bench   run benchmark tests
-doc     run godoc server at 3000 unless PORT env-var is set
+test       run tests
+testfuzz   run tests with fuzz (30 seconds)
+bench      run benchmark tests
+doc        run godoc server at 3000 unless PORT env-var is set
 ```
 
 - `make test`: Runs tests
+- `make testfuzz`: Runs Fuzzy tests for 30seconds (`go 1.18`)
 - `make bench`: Runs benchmark tests
 - `make doc`: Runs godoc server on port 3000. Use `PORT` environment variable
   for different port -> `PORT=4000 make doc`

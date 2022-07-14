@@ -5,6 +5,11 @@ PORT ?= 3000
 test:
 	go test -v
 
+## testfuzz: run tests with fuzz (30 seconds)
+.PHONY: testfuzz
+testfuzz:
+	go test -v -race -fuzz=Fuzz -fuzztime 30s .
+
 ## bench: run benchmark tests
 .PHONY: bench
 bench:
