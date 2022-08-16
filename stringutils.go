@@ -1,8 +1,6 @@
 /*
-
 Package stringutils implements basic string utility functions for demo
 purposes only!
-
 */
 package stringutils
 
